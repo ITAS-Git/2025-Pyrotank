@@ -7,7 +7,8 @@
 
 ## 📖 Project Description  
 **Pyrotank** is an interactive **laser shooting tank game**.
-Unlike traditional laser tag, this game features a **remote-controlled tank** equipped with a **laser** that the player navigates to **aim and shoot at stationary targets**.  
+Unlike traditional laser tag, this game features a **remote-controlled tank** equipped with a **laser** that the player navigates to **aim and shoot at stationary targets**.    
+
 It is **compact, easy to transport, and can be used in various settings**.  
 
 ## 🎯 **Features:**  
