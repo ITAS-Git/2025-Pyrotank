@@ -1,16 +1,39 @@
-# Pyrotank
-
-## Project Description
-This is the repository for our Pyrotank project for the ITAS 164 Project Managment class spring 2025
+# 🔥 Pyrotank - Laser Tank Game
 
 ## Team Members
 - **Gavin Lane** 
 - **Zack Jenkins** 
-- **Dylan Michalopoulos** 
+- **Dylan Michalopoulos**
 
-## Tech Stack
+## 📖 Project Description  
+**Pyrotank** is an interactive **laser shooting tank game** designed for **kids and teens**.  
+Unlike traditional laser tag, this game features a **remote-controlled tank** equipped with a **laser** that the player navigates to **aim and shoot at stationary targets**.  
+It is **compact, easy to transport, and can be used in various settings**.  
 
-## Parts
+## 🎯 **Features:**  
+- Remote-controlled **tank movement**  
+- **Laser module** for shooting at targets  
+- **Hit detection system** with feedback (lights/sound)  
+- **3D-printed** tank body and stationary targets  
+- **Wireless control** via Bluetooth or Wi-Fi   
+
+## 🛠️ Tech Stack  
+The project uses a combination of **hardware and software** components:
+
+### 💻 **Software & Programming Languages:**  
+- **Python** – Controls tank movement, laser firing, and sensors  
+- **Raspberry Pi OS** – Operating system for the Raspberry Pi  
+- **Bash Scripts** – Used for setting up the Raspberry Pi environment  
+- **Bluetooth/Wi-Fi Communication** – For remote control  
+
+### 🔧 **Hardware Components:**  
+- **Raspberry Pi** – Main controller  
+- **Laser Module** – Emits laser for shooting  
+- **Motors & Motor Driver** – Controls tank movement  
+- **Servos** – For vertical movement of the laser  
+- **Remote Controller (Bluetooth or Wi-Fi-based)** – Controls the tank  
+
+## 🔩 Parts List  
 Tank Tracks  https://www.amazon.ca/dp/B09V7NMCPK?ref_=cm_sw_r_cp_ud_dp_MCB4VCJ2PV5E66CJQMCN
 
 Turret Servo  https://www.amazon.ca/Miuzei-Torque-Digital-Waterproof-Control
