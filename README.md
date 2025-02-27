@@ -10,6 +10,8 @@ This is the repository for our Pyrotank project for the ITAS 164 Project Managme
 
 ## Tech Stack
 
+## Parts
+
 ## How To Use
 
 ## License
