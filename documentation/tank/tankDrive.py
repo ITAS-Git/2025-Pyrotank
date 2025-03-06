@@ -1,6 +1,6 @@
 from inputs import get_gamepad
+import time
 from gpiozero import Motor
-from time import sleep
 
 # Initialize motors
 left_motor = Motor(forward=17, backward=18)
@@ -55,64 +55,6 @@ def control_tank():
                         turn_left()
                     elif event.state == 0:  # Stop on button release
                         print("Stop")
-                        stop()
-
-                    # Exit on X button press
-                    if event.code == BUTTON_X and event.state == 1:
-                        print("Exiting...")
-                        stop()
-                        return
-
-    except KeyboardInterrupt:
-        print("Stopping...")
-        stop()
-
-if __name__ == "__main__":
-    control_tank()
-
-from inputs import get_gamepad
-from time import sleep
-
-# Simulate motor functions with print statements
-def forward():
-    print("[Motor] Moving Forward")
-
-def backward():
-    print("[Motor] Moving Backward")
-
-def turn_left():
-    print("[Motor] Turning Left")
-
-def turn_right():
-    print("[Motor] Turning Right")
-
-def stop():
-    print("[Motor] Stopping")
-
-# Map Switch Pro Controller buttons
-BUTTON_A = "BTN_SOUTH"  # Forward
-BUTTON_B = "BTN_EAST"   # Backward
-BUTTON_X = "BTN_NORTH"  # Exit
-BUTTON_Y = "BTN_WEST"   # Left turn
-
-# Main loop to read controller input
-def control_tank():
-    print("Waiting for Switch Pro Controller input (Press X to exit)...")
-
-    try:
-        while True:
-            events = get_gamepad()
-
-            for event in events:
-                if event.ev_type == "Key":
-                    # Movement controls
-                    if event.code == BUTTON_A and event.state == 1:
-                        forward()
-                    elif event.code == BUTTON_B and event.state == 1:
-                        backward()
-                    elif event.code == BUTTON_Y and event.state == 1:
-                        turn_left()
-                    elif event.state == 0:
                         stop()
 
                     # Exit on X button press
