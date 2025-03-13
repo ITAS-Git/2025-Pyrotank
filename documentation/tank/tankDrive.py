@@ -7,7 +7,7 @@ left_motor = Motor(forward=17, backward=27)
 right_motor = Motor(forward=10, backward=23)
 
 # Initialize LED for Laser
-led = LED(4) # GPIO 4
+Led = LED(4) # GPIO 4
 
 # Initialize pygame and joystick
 pygame.init()
