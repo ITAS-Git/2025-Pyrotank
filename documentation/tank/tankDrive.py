@@ -1,10 +1,13 @@
 import pygame
 import time
-from gpiozero import Motor, Servo
+from gpiozero import Motor, Servo, LED
 
 # Initialize motors for forward movement
 left_motor = Motor(forward=17, backward=27)
 right_motor = Motor(forward=10, backward=23)
+
+# Initialize IR_LED for shooting lasers
+Led = LED(4) # GPIO4
 
 # Initialize pygame and joystick
 pygame.init()
@@ -31,8 +34,16 @@ try:
     while True:
         pygame.event.pump()  # Update the event queue
 
+        # Check for the B button (BTN_B) press
+        if joystick.get_button(0):  # B button corresponds to button 0 on the Switch Pro Controller
+            print("🟢 B button pressed: Shooting laser!")
+            Led.on()  # Turn the IR LED on
+        else:
+            print("🔴 B button not pressed: Laser off.")
+            Led.off()  # Turn the IR LED off
+
         # Check for the A button (BTN_A) press
-        if joystick.get_button(0):  # A button corresponds to button 0 on the Switch Pro Controller
+        if joystick.get_button(1):  # A button corresponds to button 1 on the Switch Pro Controller
             print("🚀 A button pressed: Moving forward!")
             left_motor.forward()  # Move left motor forward
             right_motor.forward()  # Move right motor forward
