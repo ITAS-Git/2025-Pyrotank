@@ -31,8 +31,8 @@ The project uses a combination of **hardware and software** components:
 - **Raspberry Pi** – Main controller  
 - **Laser Module** – Emits laser for shooting  
 - **Motors & Motor Driver** – Controls tank movement  
-- **Servos** – For vertical movement of the laser  
-- **Remote Controller (Bluetooth or Wi-Fi-based)** – Controls the tank  
+- **Servos** – For the movement of the laser  
+- **Remote Controller (Bluetooth-Based)** – Controls the movement of the tank and laser 
 
 ## 🔩 Parts List  (NEEDS TO BE UPDATED)
 Tank Tracks  https://www.amazon.ca/dp/B09V7NMCPK?ref_=cm_sw_r_cp_ud_dp_MCB4VCJ2PV5E66CJQMCN
@@ -42,6 +42,8 @@ Turret Servo https://www.pishop.ca/product/mg996r-high-torque-servo/
 Led Lights  [https://www.amazon.ca/100PCS-Color-Polar-Changing-Diffused](https://www.amazon.ca/100PCS-Color-Polar-Changing-Diffused/dp/B07WTCB6H6/ref=sr_1_1?crid=204WLHOOQQX0P&dib=eyJ2IjoiMSJ9.LCCKfk_0lNggOWsVr3LiKI6_FBhu9FxbqJ3V7WcCnK8.DeQkJhZ6aGwDFC5auSS7ru6Pwr-RFV3cJUACL7lRa_s&dib_tag=se&keywords=100PCS-Color-Polar-Changing-Diffused&qid=1742499785&sprefix=100pcs-color-polar-changing-diffused%2Caps%2C109&sr=8-1)
 
 Arduino Board  https://www.amazon.ca/ARDUINO-A000066-Uno-DIP-1-5
+
+ESP32 (Placeholder) [http://amazon.ca/Freenove-ESP32-WROOM-Compatible-Wireless-Detailed/dp](http://amazon.ca/Freenove-ESP32-WROOM-Compatible-Wireless-Detailed/dp/B0C9THDPXP/ref=sr_1_3_sspa?dib=eyJ2IjoiMSJ9.mbIpJ8Uy-0-ioUxBuxqHPmizd9QvPkUI99Dz0crNlDCbnbPE3YetHiVAGYA4tX6-_-xPZjw7o6ihlHcKyqrqmITKvXgHjVJgH-odFEB4oCqB2JJDzHcwdxgYVOQkrwXt9gG-nDl6oALtV1013o2m2jki69BHhh5Qy2ngeooQ00DqGJJZpWy9QuI-W6aoy_aeNF_ukNMOmak31BRaS81l_8JDgIjdlnY76HuysL_P1ARDyLydE59MF3Gtx25eWUFPLtikHBv_a6liLRcDVST63fyo88jYbLtDYcaa6-qg-pQ.ksWRxO-3hot_16KgNT6EguAC0a7XlACjxPxoNEeKLkk&dib_tag=se&keywords=esp32&qid=1742500397&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1)
 
 Turret Infared Light  https://www.canadarobotix.com/products/454
 
