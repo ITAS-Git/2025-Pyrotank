@@ -37,7 +37,7 @@ The project uses a combination of **hardware and software** components:
 ## 🔩 Parts List  (NEEDS TO BE UPDATED)
 Tank Tracks  https://www.amazon.ca/dp/B09V7NMCPK?ref_=cm_sw_r_cp_ud_dp_MCB4VCJ2PV5E66CJQMCN
 
-Turret Servo (MG996R)
+Turret Servo https://www.pishop.ca/product/mg996r-high-torque-servo/
 
 Led Lights  [https://www.amazon.ca/100PCS-Color-Polar-Changing-Diffused](https://www.amazon.ca/100PCS-Color-Polar-Changing-Diffused/dp/B07WTCB6H6/ref=sr_1_1?crid=204WLHOOQQX0P&dib=eyJ2IjoiMSJ9.LCCKfk_0lNggOWsVr3LiKI6_FBhu9FxbqJ3V7WcCnK8.DeQkJhZ6aGwDFC5auSS7ru6Pwr-RFV3cJUACL7lRa_s&dib_tag=se&keywords=100PCS-Color-Polar-Changing-Diffused&qid=1742499785&sprefix=100pcs-color-polar-changing-diffused%2Caps%2C109&sr=8-1)
 
