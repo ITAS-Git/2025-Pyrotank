@@ -59,8 +59,13 @@ To Be Completed
 <!--Step by Step on: How to Run Program -->
 
 <!--How to Control Tank -->
-**Controls**
-Left Joystick: 
+**Tank Controls**
+
+Left Joystick = Tank Movement 
+
+Right Joystick = Servo Movement 
+
+B Button = Fire laser 
 
 
 
