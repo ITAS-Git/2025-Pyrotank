@@ -54,5 +54,13 @@ Bluetooth Controller  [ https://www.amazon.ca/Ultimate-Bluetooth-Controller-Vibr
 ## How To Use
 
 To Be Completed
+<!--Step by Step on: How to Assemble -->
+
+<!--Step by Step on: How to Run Program -->
+
+<!--How to Control Tank -->
+**Controls**
+Left Joystick: 
+
 
 
