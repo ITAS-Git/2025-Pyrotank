@@ -34,7 +34,7 @@ The project uses a combination of **hardware and software** components:
 - **Servos** – For vertical movement of the laser  
 - **Remote Controller (Bluetooth or Wi-Fi-based)** – Controls the tank  
 
-## 🔩 Parts List  
+## 🔩 Parts List  (NEEDS TO BE UPDATED)
 Tank Tracks  https://www.amazon.ca/dp/B09V7NMCPK?ref_=cm_sw_r_cp_ud_dp_MCB4VCJ2PV5E66CJQMCN
 
 Turret Servo  https://www.amazon.ca/Miuzei-Torque-Digital-Waterproof-Control
