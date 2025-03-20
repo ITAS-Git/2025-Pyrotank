@@ -4,7 +4,7 @@ from gpiozero import Motor, Servo, LED
 
 # Initialize motors for tank steering (relay-based)
 left_motor = Motor(forward=17, backward=27)
-right_motor = Motor(forward=10, backward=23)
+#right_motor = Motor(forward=10, backward=23)
 
 # Initialize LED for Laser
 Led = LED(4)  # GPIO 4
@@ -31,71 +31,61 @@ servo = Servo(18, min_pulse_width=0.0005, max_pulse_width=0.0025)  # GPIO 18 for
 servo.value = 0  
 time.sleep(0.5)  # Allow some time for the servo to move before taking input
 
-# Deadzone threshold to prevent jitter
-DEADZONE = 0.1  
-ACTIVATION_THRESHOLD = 0.5  # Joystick must be moved at least halfway
-
-# Smoothing factor (higher value = smoother but slower response)
-SMOOTHING_FACTOR = 0.8
-previous_servo_value = 0  
-
 try:
-    print("➡️ Use the left stick for tank steering (relay control).")
-    print("➡️ Use the right stick to move the servo.")
-    print("➡️ Press the A button to toggle the LED.")
+    print("➡️ Use the **D-pad** for tank steering.")
+    print("➡️ Use the **right stick** to move the servo.")
+    print("➡️ Press **A button** to toggle the LED.")
 
     while True:
         pygame.event.pump()  # Update the event queue
 
         # 🚨 LED Control (A Button)
         if joystick.get_button(1):  # A button on the Switch Pro Controller
+            print("Button A pressed")
             Led.on()  # Turn LED on
         else:
             Led.off()  # Turn LED off
 
-        # 🎮 Tank Steering (Left Joystick)
-        move = -joystick.get_axis(1)  # Forward/Backward (Invert Y-axis)
-        turn = joystick.get_axis(0)   # Left/Right Steering
+        # 🎮 **D-pad Motor Control (Safe)**
+        dpad_up = joystick.get_hat(0)[1] == 1
+        dpad_down = joystick.get_hat(0)[1] == -1
+        dpad_left = joystick.get_hat(0)[0] == -1
+        dpad_right = joystick.get_hat(0)[0] == 1
 
-        # Apply deadzone
-        if abs(move) < DEADZONE:
-            move = 0
-        if abs(turn) < DEADZONE:
-            turn = 0
-
-        # Motor control logic (fully ON or OFF)
-        if move >= ACTIVATION_THRESHOLD:
+        # Ensure no conflicting motor commands
+        if dpad_up and not dpad_down:
+            print("D-pad Up = Moving Forward")
             left_motor.forward()
-            right_motor.forward()
-        elif move <= -ACTIVATION_THRESHOLD:
+            #right_motor.forward()
+        elif dpad_down and not dpad_up:
+            print("D-pad Down = Moving Backward")
             left_motor.backward()
-            right_motor.backward()
-        elif turn >= ACTIVATION_THRESHOLD:
+            #right_motor.backward()
+        elif dpad_left and not dpad_right:
+            print("D-pad Left = Turning Left")
             left_motor.forward()
-            right_motor.backward()
-        elif turn <= -ACTIVATION_THRESHOLD:
+            #right_motor.backward()
+        elif dpad_right and not dpad_left:
+            print("D-pad Right = Turning Right")
             left_motor.backward()
-            right_motor.forward()
+            #right_motor.forward()
         else:
             left_motor.stop()
-            right_motor.stop()
+            #right_motor.stop()
 
         # 🎯 Servo Control (Right Joystick X-Axis)
         horizontal_axis = joystick.get_axis(2)  # Right stick X-axis
 
         # Apply deadzone filtering
-        if abs(horizontal_axis) < DEADZONE:
+        if abs(horizontal_axis) < 0.1:
             horizontal_axis = 0
             servo.value = None  # Stop servo completely to avoid jitter
         else:
-            # Smooth out fluctuations
-            smoothed_value = (SMOOTHING_FACTOR * horizontal_axis) + (1 - SMOOTHING_FACTOR) * previous_servo_value
-            previous_servo_value = smoothed_value
-
             # Scale joystick input to servo range (-1 to 1)
-            servo_position = max(-1, min(1, smoothed_value))
+            servo_position = max(-1, min(1, horizontal_axis))
 
             # Set servo position
+            print(f"Right Joystick = {servo_position}")
             servo.value = servo_position  
 
         time.sleep(0.1)  # Sleep to prevent high CPU usage
@@ -103,5 +93,5 @@ try:
 except KeyboardInterrupt:
     print("🛑 Interrupted! Stopping motors and servo.")
     left_motor.stop()
-    right_motor.stop()
+    #right_motor.stop()
     servo.value = None  # Stop the servo
