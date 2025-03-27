@@ -1,0 +1,11 @@
+Tank Raspberry Pi GPIO Pins:
+
+Motors:
+L: GPIO-17 GPIO-27
+R: GPIO-10 GPIO-23
+
+Servo:
+GPIO-18
+
+LED:
+GPIO-4
