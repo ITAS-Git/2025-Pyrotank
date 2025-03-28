@@ -1,11 +1,18 @@
 Tank Raspberry Pi GPIO Pins:
 
 Motors:
-L: GPIO-17 GPIO-27
-R: GPIO-10 GPIO-23
+L: GPIO-17-Red GPIO-27-Black
+R: GPIO-10-Blue GPIO-23-Green
+5V: Pin-4-Yellow
+GND: Pin-6-Orange
+
+----------------------------
 
 Servo:
-GPIO-18
+GPIO-18-Green
 
-LED:
-GPIO-4
+Laser:
+GPIO-4-Red
+
+5V: Pin-2-Red
+GND: Pin-39-Brown
