@@ -43,7 +43,7 @@ Led Lights  [https://www.amazon.ca/100PCS-Color-Polar-Changing-Diffused](https:/
 
 ESP32 (Placeholder) [http://amazon.ca/Freenove-ESP32-WROOM-Compatible-Wireless-Detailed/dp](http://amazon.ca/Freenove-ESP32-WROOM-Compatible-Wireless-Detailed/dp/B0C9THDPXP/ref=sr_1_3_sspa?dib=eyJ2IjoiMSJ9.mbIpJ8Uy-0-ioUxBuxqHPmizd9QvPkUI99Dz0crNlDCbnbPE3YetHiVAGYA4tX6-_-xPZjw7o6ihlHcKyqrqmITKvXgHjVJgH-odFEB4oCqB2JJDzHcwdxgYVOQkrwXt9gG-nDl6oALtV1013o2m2jki69BHhh5Qy2ngeooQ00DqGJJZpWy9QuI-W6aoy_aeNF_ukNMOmak31BRaS81l_8JDgIjdlnY76HuysL_P1ARDyLydE59MF3Gtx25eWUFPLtikHBv_a6liLRcDVST63fyo88jYbLtDYcaa6-qg-pQ.ksWRxO-3hot_16KgNT6EguAC0a7XlACjxPxoNEeKLkk&dib_tag=se&keywords=esp32&qid=1742500397&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1)
 
-Turret Infared Light  https://www.canadarobotix.com/products/454
+Turret Laser Module  [(https://www.amazon.ca/KY-008-Sensor-Module-Copper-Arduino)](https://www.amazon.ca/KY-008-Sensor-Module-Copper-Arduino/dp/B09P49K5S8/ref=asc_df_B09P49K5S8/?tag=googleshopc0c-20&linkCode=df0&hvadid=706828873376&hvpos=&hvnetw=g&hvrand=12983579950334511452&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001616&hvtargid=pla-2385386413331&psc=1&mcid=2d85d731efcf3685af1df48a9026c5ab&tag=googleshopc0c-20&linkCode=df0&hvadid=706828873376&hvpos=&hvnetw=g&hvrand=12983579950334511452&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001616&hvtargid=pla-2385386413331&psc=1&gad_source=1)
 
 Raspberry Pi (Placeholder) https://www.pishop.ca/product/raspberry-pi-5-8gb/
 
