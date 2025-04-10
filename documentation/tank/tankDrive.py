@@ -86,29 +86,20 @@ try:
             left_motor.stop()
             right_motor.stop()
 
-              # 🎯 Servo Control (Right Joystick X-Axis)
+        # 🎯 Servo Control (Right Joystick X-Axis)
         horizontal_axis = joystick.get_axis(2)  # Right stick X-axis
 
-        # Apply deadzone
+        # Apply deadzone filtering
         if abs(horizontal_axis) < 0.1:
-            target_position = 0
+            horizontal_axis = 0
+            servo.value = None  # Stop servo completely to avoid jitter
         else:
-            # Reduce sensitivity by scaling the input
-            target_position = max(-1, min(1, horizontal_axis * 0.5))  # Reduce range by 50%
+            # Scale joystick input to servo range (-1 to 1)
+            servo_position = max(-1, min(1, horizontal_axis))
 
-        # Gradual easing: move the servo slowly toward the target position
-        current_position = servo.value if servo.value is not None else 0
-        step = 0.05  # Smaller = smoother/slower
-
-        if abs(target_position - current_position) < step:
-            servo.value = target_position
-        else:
-            if target_position > current_position:
-                servo.value = current_position + step
-            else:
-                servo.value = current_position - step
-
-        print(f"Servo moving to: {servo.value:.2f}")
+            # Set servo position
+            print(f"Right Joystick = {servo_position}")
+            servo.value = -servo_position  
 
         time.sleep(0.1)  # Sleep to prevent high CPU usage
 
