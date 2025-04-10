@@ -86,25 +86,29 @@ try:
             left_motor.stop()
             right_motor.stop()
 
-        # 🎯 Fine Aiming - Servo Control (Right Stick X-Axis)
+              # 🎯 Servo Control (Right Joystick X-Axis)
         horizontal_axis = joystick.get_axis(2)  # Right stick X-axis
-        current_position = servo.value if servo.value is not None else 0.0
 
-        # Deadzone to prevent drift
-        if abs(horizontal_axis) > 0.1:
-            # Fine adjustment factor
-            adjustment = horizontal_axis * 0.01  # Smaller = slower
-            new_position = current_position - adjustment  # Reverse direction if needed
-
-            # Clamp to servo range [-1, 1]
-            new_position = max(-1.0, min(1.0, new_position))
-
-            servo.value = new_position
-            print(f"Aiming Servo: {servo.value:.2f}")
+        # Apply deadzone
+        if abs(horizontal_axis) < 0.1:
+            target_position = 0
         else:
-            # Optionally stop the servo to reduce jitter
-            servo.value = None
+            # Reduce sensitivity by scaling the input
+            target_position = max(-1, min(1, horizontal_axis * 0.5))  # Reduce range by 50%
 
+        # Gradual easing: move the servo slowly toward the target position
+        current_position = servo.value if servo.value is not None else 0
+        step = 0.05  # Smaller = smoother/slower
+
+        if abs(target_position - current_position) < step:
+            servo.value = target_position
+        else:
+            if target_position > current_position:
+                servo.value = current_position + step
+            else:
+                servo.value = current_position - step
+
+        print(f"Servo moving to: {servo.value:.2f}")
 
         time.sleep(0.1)  # Sleep to prevent high CPU usage
 
