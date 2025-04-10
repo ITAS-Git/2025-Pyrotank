@@ -25,14 +25,16 @@ The project uses a combination of **hardware and software** components:
 - **Python** – Controls tank movement, laser firing, and sensors  
 - **Raspberry Pi OS** – Operating system for the Raspberry Pi  
 - **Bash Scripts** – Used for setting up the Raspberry Pi environment  
-- **Bluetooth/Wi-Fi Communication** – For remote control  
+- **Bluetooth/Wi-Fi Communication** – For remote control
+- **C++** - Controls target logic
 
 ### 🔧 **Hardware Components:**  
 - **Raspberry Pi** – Main controller  
 - **Laser Module** – Emits laser for shooting  
 - **Motors & Motor Driver** – Controls tank movement  
 - **Servos** – For the movement of the laser  
-- **Remote Controller (Bluetooth-Based)** – Controls the movement of the tank and laser 
+- **Remote Controller (Bluetooth-Based)** – Controls the movement of the tank and laser
+- **Arduino** - Target Controller
 
 ## 🔩 Parts List 
 Tank Tracks  https://www.amazon.ca/dp/B09V7NMCPK?ref_=cm_sw_r_cp_ud_dp_MCB4VCJ2PV5E66CJQMCN
