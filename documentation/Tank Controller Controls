@@ -1,5 +1,5 @@
-Tank Movement = Left Joystick
+Tank Movement = DPAD (Up, Down, left, Right)
 
-Servo Movement = Right Joystick
+Servo Movement = Right Joystick (Left, Right)
 
-B Button = Fire laser (Hold to Fire)
+B Button = Fire laser (Press to Fire)
