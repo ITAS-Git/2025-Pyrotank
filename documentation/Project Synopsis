@@ -1,1 +1,19 @@
+PyroTank Project Synopsis:
+
+Project Management Methodology 
+Our group followed the Kanban methodology within Github. Different issues were created that reflected the tasks that we had to complete. Within the actual Kanban board, we had six sections; backlog, read, in progress, in review, done, and paused. We added tasks to the backlog before each cycle started, in hopes that we would be able to finish them by the end of the sprint. However, more often than not, they had to be moved into the paused section, due to project complications. In the end, all of the tasks that we added, moved along the kanban board smoothly, ending in the done column.
+
+Reasons for scope changes
+We had two major reasons why our scope had to change throughout the project. First off, due to time limitations, we had to cut down on some major features, such as having a second tank and having different game modes. Secondly, with the budget that we were given at the beginning of this project, we knew off the bat that our original idea of having two tanks was impossible. Therefore, we had to pivot and change the scope to the target shooting game.
+
+Things that were left undone
+Unfortunately, there were a few features that were left undone, as we ran out of time. The biggest fix would probably have been focusing the laser, so it was more accurate when hitting the target. The laser still works, however it can be a little bit too difficult to aim. Also, covering the back of the targets so there was no wiring exposed is another thing that was not done. While it is not necessarily essential to the finished product, the targets should not be used outside. Lastly, we would have figured out a way to turn on the Raspberry Pi without needing to take off the top of the tank body. This way, it would have been a lot easier to turn on and off.
+
+Lessons learned
+Throughout this course we’ve learned many lessons such as time management and scope adjusting.
+
+Good points/bad points
+Although not all scope points were hit there were some adjustments that benefited the final design. For example the IR cannon being changed for a laser and light sensor. This greatly increased our accuracy for both shooting and registering hits. The tank script running as a boot service allowed our tank to run headless, even with the inconvenience of it being more finicky it allows it to be turned on without the bulk and hassle of a screen and keyboard. 
+
+With the positive changes there were some drawbacks, specifically with the target. As we changed to light sensors, it allows the target to trip with powerful light sources, although uncommon it's still possible to get the error. Lastly, the LED display, unfortunately we were not able to get it working for the final product, and instead have a program that displays it on a computer. It's still functional however we would have implement it if there was more time 
 
